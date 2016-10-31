@@ -43,4 +43,12 @@ public class PersonTest{
     assertEquals(true, person.drunk());
   }
 
+  @Test
+  public void personIsSoberAfterSleep(){
+    person.drink(beer);
+    assertEquals(1, person.beerCount());
+    person.sleep();
+    assertEquals(0, person.beerCount());
+  }
+
 }

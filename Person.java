@@ -15,11 +15,11 @@ public class Person{
     int counter = 0;
     for (Beer drunk : drink){
       if (drunk != null){
-      counter ++;
+        counter ++;
+      }
     }
+    return counter;
   }
-  return counter;
-}
 
   public void drink(Beer beer){
     if (drunk()){
@@ -33,5 +33,10 @@ public class Person{
     return beerCount() == drink.length;
   }
 
-
+  public void sleep(){
+    for (int i = 0; i < drink.length; i++){
+      drink[i] = null; 
+    }
+  }
 }
+
