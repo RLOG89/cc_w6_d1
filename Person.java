@@ -1,14 +1,23 @@
 public class Person{
   private String name;
-  private Pint[] drunk;
+  private Beer[] drink;
 
   public Person(String name){
     this.name = name;
-    this.drunk = new Pint[10];
+    this.drink = new Beer[10];
   }
 
   public String getName(){
     return this.name;
   }
 
+  public int beerCount(){
+    int counter = 0;
+    for (Beer drunk : drink){
+      if (drunk != null){
+      counter ++;
+    }
+  }
+  return counter;
+}
 }

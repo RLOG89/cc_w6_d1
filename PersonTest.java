@@ -3,12 +3,12 @@ import org.junit.*;
 
 public class PersonTest{
   Person person;
-  Pint pint;
+  Beer beer;
 
   @Before 
   public void before(){
     person = new Person("Tom");
-    pint = new Pint();
+    beer = new Beer();
   }
 
   @Test
@@ -16,5 +16,9 @@ public class PersonTest{
     assertEquals("Tom", person.getName());
   }
 
+  @Test
+  public void beerDrunkStartsEmpty(){
+    assertEquals(0, person.beerCount());
+  }
 
 }
