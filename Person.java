@@ -22,8 +22,16 @@ public class Person{
 }
 
   public void drink(Beer beer){
+    if (drunk()){
+      return;
+    }
     int nextEmptyIndex = beerCount();
     drink[nextEmptyIndex] = beer;
   }
+
+  public boolean drunk(){
+    return beerCount() == drink.length;
+  }
+
 
 }

@@ -27,4 +27,12 @@ public class PersonTest{
     assertEquals(1, person.beerCount());
   }
 
-}
+  @Test
+  public void cantDrinkWhenDrunk(){
+    for (int i = 0; i < 12; i++){
+      person.drink(beer);
+    }
+      assertEquals(10, person.beerCount());
+    }
+  }
+
