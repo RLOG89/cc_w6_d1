@@ -20,4 +20,10 @@ public class Person{
   }
   return counter;
 }
+
+  public void drink(Beer beer){
+    int nextEmptyIndex = beerCount();
+    drink[nextEmptyIndex] = beer;
+  }
+
 }

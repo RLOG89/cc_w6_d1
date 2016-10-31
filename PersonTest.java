@@ -21,4 +21,10 @@ public class PersonTest{
     assertEquals(0, person.beerCount());
   }
 
+  @Test
+  public void canDrinkBeer(){
+    person.drink(beer);
+    assertEquals(1, person.beerCount());
+  }
+
 }
